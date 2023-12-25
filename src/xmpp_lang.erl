@@ -50,12 +50,7 @@ is_valid(_) ->
 check(<<>>) ->
     <<>>;
 check(S) ->
-    case is_valid(S) of
-	true ->
-	    S;
-	false ->
-	    erlang:error({bad_lang, S})
-    end.
+    S.
 
 %%%===================================================================
 %%% Internal functions
